@@ -1,0 +1,10 @@
+attribute vec3 v_position;
+attribute vec2 v_coord;
+uniform mat4 mvp;
+varying vec2 a_coord;
+
+void main()
+{
+	gl_Position = mvp * vec4(v_position, 1.0f);
+	a_coord = v_coord;
+}
